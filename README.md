@@ -22,8 +22,11 @@ I took time to deal with java and new keyWords like main , class ,and took time 
 ----------------------------------------------------------------------------------------
 # lab 2 :
 1. The first thing we deal with IntelliJ, and use Gradle with IntelliJ IDEA  -type java-library
-2. create methods Rolling Dice,Contains Duplicates,Calculating Averages,and Arrays of Arrays.
-
+2. create methods 
+Rolling Dice :method should return an array containing the values of the rolls.
+Contains Duplicates : returns true or false depending on whether the array contains duplicate values.
+Calculating Averages :calculates and returns the average of all the values in the array.
+ Arrays of Arrays:calculate the average value for each array and return the array with the lowest average.
 3. then we take TDD 'Testing Development Driven' it's a methodology to test your application.
 and deal with Arrange/Act/Assertions >> to test your code.
 
