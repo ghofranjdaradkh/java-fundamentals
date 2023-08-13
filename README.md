@@ -42,5 +42,29 @@ and deal with Arrange/Act/Assertions >> to test your code.
 the function not toke time but the testing to deal with it it took time >> 6 -7 hours 
 
 
+-------------------------------------------------------------------------------------
+# lab 3 :
+In the lecture we learned:
+HashMap: allows you to store key-value pairs ,Keys must be unique does not have duplicated, HashSet: It is used to store a collection of unique elements with no duplicates.
+Java packages: we learned the different between
+packages: organize and access code and structure classes and to use classes from other packages you need to import. 
+and some packages it automatically import like java. Lang.
+we took the types of packages :public , protected ,default and private and took the difference between  them.
+File I/O and Paths: I/O mean input/ output 
+we took the paths like absolute path that go to the root directory and the relative path that in the same directory you are work with.
+then we took the scanner where you can read the files whether line by line or word by word ...else  
+Exception handling:>>>>error are handled by throwing and or try and catch >>>we have run time expectation and compiled time expectation 
+### output for the methods 
+
+![Alt text](assests/weathertest.PNG)
+
+![Alt text](assests/testcode3.PNG)
+
+![Alt text](assests/tallytest.PNG)
+## Time solving the lab
+the function not toke time but the testing to deal with it it took time >> 6 -7 hours 
+but the testing for File I/O I dont understood
+
+
 
 
