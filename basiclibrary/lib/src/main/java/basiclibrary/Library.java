@@ -5,6 +5,14 @@ package basiclibrary;
 
 
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+
+
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
@@ -18,11 +26,11 @@ public class Library {
             System.out.print(roll + " ");
         }
 
-       boolean containsDuplicates= containsDuplicates(rollDice);
+        boolean containsDuplicates = containsDuplicates(rollDice);
         System.out.println(containsDuplicates);
 
 
-        double averages=CalculatingAverages(rollDice);
+        double averages = CalculatingAverages(rollDice);
         System.out.println(averages);
 
         int[][] weeklyMonthTemperatures = {
@@ -34,10 +42,38 @@ public class Library {
 
 
 
-        int [] arrOfArrs=arrayOfArrays(weeklyMonthTemperatures);
+
+
+
+        String weather = weatherTemp(weeklyMonthTemperatures);
+        System.out.println(weather);
+
+
+
+        int[] arrOfArrs = arrayOfArrays(weeklyMonthTemperatures);
         for (int element : arrOfArrs) {
-            System.out.print(element + " ");}
+            System.out.print(element + " ");
+        }
+
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+
+
+        String winner = tally(votes);
+        System.out.println(winner + " received the most votes!");
     }
+
+
+
 
 
     public static int[] roll(int n) {
@@ -75,21 +111,97 @@ public class Library {
     }
 
 
-  public static int[] arrayOfArrays (int[][] arr){
-        int [] lowestAvgArr= arr[0];
-      double lowestAvg= CalculatingAverages(arr[0]);
-        for (int i=0; i<arr.length ;i++){
+    public static int[] arrayOfArrays(int[][] arr) {
+        int[] lowestAvgArr = arr[0];
+        double lowestAvg = CalculatingAverages(arr[0]);
+        for (int i = 0; i < arr.length; i++) {
 
-            if (CalculatingAverages(arr[i])<=lowestAvg ){
-                lowestAvg= CalculatingAverages(arr[i]);
-                lowestAvgArr=arr[i];
+            if (CalculatingAverages(arr[i]) <= lowestAvg) {
+                lowestAvg = CalculatingAverages(arr[i]);
+                lowestAvgArr = arr[i];
 
             }
 
         }
         return lowestAvgArr;
-  }
+    }
+
+
+    public static String weatherTemp(int[][] weeklyMonthTemperatures) {
+        int minValue = Integer.MAX_VALUE;
+        int maxValue = Integer.MIN_VALUE;
+
+        HashSet<Integer> arraySet = new HashSet<>();
+
+        for (int[] week : weeklyMonthTemperatures) {
+            for (int tempDay : week) {
+                arraySet.add(tempDay);//all the temp added to array set without duplicated
+
+                if (tempDay < minValue) {
+                    minValue = tempDay;
+                }
+                if (tempDay > maxValue) {
+                    maxValue = tempDay;
+                }
+
+            }
+        }
+
+        System.out.println("High: " + maxValue );
+        System.out.println("Low: " + minValue);
+        String res = "";
+        for (int temp = minValue; temp <= maxValue; temp++) {
+            if (!arraySet.contains(temp)) {
+                res += "Never saw temperature: " + temp + "\n";
+
+            }
+        }
+
+        return res;
+    }
+
+
+    public static String tally(List<String> votes) {
+        Map<String, Integer> voteCounts = new HashMap<>();
+        for (String vote : votes) {
+            if (voteCounts.containsKey(vote)) {
+                int count = voteCounts.get(vote);// get key
+                voteCounts.put(vote, count + 1);// put as key value pairs inside hashmap
+            } else {
+                voteCounts.put(vote, 1);
+            }
+        }
+        String winner = "";
+        int maxVotes = 0;
+        for (String name :voteCounts.keySet()) {//keySet() return all keys(names) stored in the (voteCounts) map
+            int nameVotesCount= voteCounts.get(name);//get the voteCount for the current name
+
+            if (nameVotesCount > maxVotes) {
+
+
+                maxVotes = nameVotesCount;
+                winner = name;
+            }
+        }
+        return winner;
+    }
+
+
+    }
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
