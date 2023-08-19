@@ -1,0 +1,5 @@
+console.log("add1 00", add1(0,0))
+console.log("add1 01", add1(0,1))
+console.log("add1 10", add1(1,0))
+console.log("add1 11", add1(1,1))
+console.log()
