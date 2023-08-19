@@ -61,6 +61,12 @@ Exception handling:>>>>error are handled by throwing and or try and catch >>>we 
 ![Alt text](assests/testcode3.PNG)
 
 ![Alt text](assests/tallytest.PNG)
+
+## outputs for linter
+
+![gradlew test.PNG](assests%2Fgradlew%20test.PNG)
+![testcaseslinter.PNG](assests%2Ftestcaseslinter.PNG)
+
 ## Time solving the lab
 the function not toke time but the testing to deal with it it took time >> 6 -7 hours 
 but the testing for File I/O I dont understood
