@@ -65,6 +65,20 @@ Exception handling:>>>>error are handled by throwing and or try and catch >>>we 
 the function not toke time but the testing to deal with it it took time >> 6 -7 hours 
 but the testing for File I/O I dont understood
 
+-------------------------------------------------------------------------------
+# lab 6
+in this lab we create two class resturant and review then use add review when added the number of stars update
+Resturant methods :
+updatestars
+getNumberStars
+Review methods :
+addReview
+updateStars
+## Time solving the lab
+the function not toke time but the testing to deal with it it took time >> 6 -7 hours
 
+OUTPUT :
+![output6.PNG](assests%2Foutput6.PNG)
+![testlab6.PNG](assests%2Ftestlab6.PNG)
 
-
+![gradlew 6.PNG](assests%2Fgradlew%206.PNG)
