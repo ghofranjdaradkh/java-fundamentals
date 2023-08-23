@@ -1,8 +1,6 @@
 package inheritance;
 
 
-import org.checkerframework.common.returnsreceiver.qual.This;
-
 import java.util.LinkedList;
 
 public class Shop  implements ReviewAll {
@@ -62,7 +60,7 @@ public class Shop  implements ReviewAll {
         updateStars();
     }
     @Override
-    public void updateStars() {
+    public int updateStars() {
         int totalStars = 0;  // Initialize the total stars counter
         // Iterate through each review in the reviews set
         for (Review review : reviews) {
@@ -74,6 +72,7 @@ public class Shop  implements ReviewAll {
         } else {
             numStars = 0;  // If no reviews, set the average rating to 0
         }
+        return numStars;
     }
 
 

@@ -82,3 +82,20 @@ OUTPUT :
 ![testlab6.PNG](assests%2Ftestlab6.PNG)
 
 ![gradlew 6.PNG](assests%2Fgradlew%206.PNG)
+-------------------------------------------------------------------
+ # lab 7 :
+in this lab i create an interface Review all because i have multi inheritance with classes shop and restaurant and theater 
+I put the main methods add review and update the number of star in the interface and implement it in each class .
+
+
+ # time solving 
+ it took long time it took the 7-8 hours 
+
+output :
+![lab7Run..PNG](assests%2Flab7Run..PNG)
+
+![testcaseslab7.PNG](assests%2Ftestcaseslab7.PNG)
+
+![gradlewtest7.PNG](assests%2Fgradlewtest7.PNG)
+
+
