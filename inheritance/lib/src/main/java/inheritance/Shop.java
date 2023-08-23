@@ -1,60 +1,67 @@
 package inheritance;
 
+
+import org.checkerframework.common.returnsreceiver.qual.This;
+
 import java.util.LinkedList;
 
-class Restaurant implements ReviewAll{
-    // Define instance variables
-    private String name;
-    private int numStars;
-    private double price;
+public class Shop  implements ReviewAll {
+
+    private String name ;
+    private String description;
+    private  int num$;
     private LinkedList<Review> reviews = new LinkedList<>();
 
+    private int numStars;
 
-    // Constructor to create a Restaurant instance
-    public Restaurant(String name, int numStars, double price) {
-        this.name = name;
-        this.numStars = numStars;
-        this.price = price;
-        this.reviews = getReviews();; // Initialize the reviews set
+
+    @Override
+    public LinkedList<Review> getReviews() {
+        return reviews;
     }
 
+    public Shop(String name, String description, int num$) {
+
+        this.name = name;
+        this.description=description;
+        this.num$=num$;
+    }
 
     public String getName() {
         return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getNum$() {
+        return num$;
     }
 
     public int getNumStars() {
         return numStars;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public LinkedList<Review> getReviews() {
-        return reviews;
-    }
-
-
-
-    // Override the toString() method to provide a formatted string representation
     @Override
     public String toString() {
-        return "Restaurant{" +
+        return "Shop{" +
                 "name='" + name + '\'' +
-                ", numStars=" + numStars +
-                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", num$=" + num$ +
                 '}';
     }
 
-    // Method to add a new review to the restaurant
+
+
+
+    @Override
     public void addReview(String body, String author, int numStars) {
-        Review newReview = new Review(body, author, numStars, this);
+        Review newReview = new Review(body, author, numStars,this );
         reviews.add(newReview);
         updateStars();
     }
-
-    // Method to update the average rating of the restaurant based on reviews
+    @Override
     public void updateStars() {
         int totalStars = 0;  // Initialize the total stars counter
         // Iterate through each review in the reviews set
@@ -69,6 +76,8 @@ class Restaurant implements ReviewAll{
         }
     }
 
+
+
     @Override
     public String toReviewString() {
         StringBuilder reviewString = new StringBuilder(" Reviews:\n");
@@ -78,7 +87,7 @@ class Restaurant implements ReviewAll{
         return reviewString.toString();
     }
 
-    }
 
 
 
+}

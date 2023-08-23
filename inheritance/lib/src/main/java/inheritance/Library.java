@@ -5,12 +5,40 @@ package inheritance;
 
 public class Library {
     public static void main(String[] args) {
-        Restaurant restaurant = new Restaurant("new Restaurant", 3, 20.0);
+
+        Restaurant restaurant = new Restaurant("Algerbal", 0, 20.0);
+
         Review review = new Review("Delicious !", "ghofran", 5, restaurant);
+
         restaurant.addReview("good ", "ali", 3);
+
         restaurant.addReview("very good", "ahmad", 4);
+
         System.out.println(review);
-    }
-}
+        System.out.println("all resturant reviews : "+restaurant.getReviews());
+
+
+        Shop shop =new Shop( "meccaMall", "it is open 24", 20);
+        Review review1 = new Review("new", "ghofran", 3, shop);
+        System.out.println(review1);
+        shop.addReview("amazing","ghofran",4);
+        System.out.println("all shop reviews : "+shop.getReviews());
+
+
+        Theater theater = new Theater("the god father" );
+        Review review2 = new Review("old", "ghofran", 1, theater);
+        System.out.println(theater.addMovies("new movie"));
+        System.out.println( theater.addMovies("bad movie"));
+     theater.removeMovie("bad movie");
+        theater.addReview("good", "amal", 5);
+        System.out.println(review2);
+        System.out.println("all theater reviews : "+theater.getReviews());
+//        }
+}}
+
+
+
+
+
 
 
