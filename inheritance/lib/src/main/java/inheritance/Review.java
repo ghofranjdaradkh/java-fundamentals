@@ -74,7 +74,7 @@ public class Review {
         if (restaurant != null) {
             additionalDetails = String.format(", price=%.2f", restaurant.getPrice());
         } else if (shop != null) {
-            additionalDetails = String.format(", description=%s, num$=%d, numStars=%d", shop.getDescription(), shop.getNum$(), shop.getNumStars());
+            additionalDetails = String.format(", description=%s, num$=%d", shop.getDescription(), shop.getNum$());
         }
 
         return "Review{" +

@@ -55,7 +55,7 @@ class Restaurant implements ReviewAll{
     }
 
     // Method to update the average rating of the restaurant based on reviews
-    public void updateStars() {
+    public int updateStars() {
         int totalStars = 0;  // Initialize the total stars counter
         // Iterate through each review in the reviews set
         for (Review review : reviews) {
@@ -67,6 +67,7 @@ class Restaurant implements ReviewAll{
         } else {
             numStars = 0;  // If no reviews, set the average rating to 0
         }
+        return numStars;
     }
 
     @Override

@@ -33,7 +33,7 @@ import java.util.LinkedList;
 
      @Override
 
-         public void updateStars() {
+         public int updateStars() {
              int totalStars = 0;  // Initialize the total stars counter
              // Iterate through each review in the reviews set
              for (Review review : reviews) {
@@ -45,7 +45,8 @@ import java.util.LinkedList;
              } else {
                  numStars = 0;  // If no reviews, set the average rating to 0
              }
-         }
+         return numStars;
+     }
 
 
 
