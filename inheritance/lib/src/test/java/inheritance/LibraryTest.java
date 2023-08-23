@@ -27,10 +27,19 @@ class LibraryTest {
         Restaurant restaurant = new Restaurant("New Restaurant", 0, 20.0);
         Review review = new Review("Delicious !", "ghofran", 5, restaurant);
 
-        restaurant.addReview(review.body, review.author, review.numberstars);
+        restaurant.addReview(review.getBody(), review.getAuthor(), review.getNumberstars());
 
-        assertEquals(5, restaurant.numStars);
-        assertEquals(5, review.numberstars);
-        assertEquals(restaurant, review.restaurant);
+        assertEquals(5, restaurant.getNumStars());
+        assertEquals(5, review.getNumberstars());
+        assertEquals(restaurant, review.getRestaurant());
     }
-}
+
+    @Test
+    public void shopTest (){
+        Shop newShop =new Shop("maccaMall","open 24 hours",20);
+        assertEquals("maccaMall",newShop.getName());
+        assertEquals("open 24 hours",newShop.getDescription());
+        assertEquals(20,newShop.getNum$());
+        String expected="Shop{name='maccaMall', description='open 24 hours', num$=20}";
+        assertEquals( expected ,newShop.toString());
+}}
